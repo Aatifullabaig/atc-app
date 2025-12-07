@@ -1,0 +1,518 @@
+/* Home Page Styling */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.home-page.dark {
+  background: #1a1a1a;
+  color: #ecf0f1;
+}
+
+/* Header */
+.home-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #27ae60;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-section h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-section p {
+  margin: 0;
+  font-size: 12px;
+  color: #bdc3c7;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.utc-clock {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info {
+  font-size: 13px;
+  color: #bdc3c7;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.nav-btn.primary-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.nav-btn.primary-btn:hover {
+  background: #229954;
+}
+
+.nav-btn.login-btn {
+  background: #3498db;
+  color: white;
+}
+
+.nav-btn.login-btn:hover {
+  background: #2980b9;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Main Content */
+.home-main {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Info Panel */
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-page.dark .info-panel {
+  background: #2c3e50;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-section h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #27ae60;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 8px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stat-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Flights List */
+.flights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.flight-item {
+  background: #f9f9f9;
+  border-left: 4px solid #27ae60;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.home-page.dark .flight-item {
+  background: #1a1a1a;
+}
+
+.flight-item:hover {
+  background: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.home-page.dark .flight-item:hover {
+  background: #34495e;
+}
+
+.flight-callsign {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.flight-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #7f8c8d;
+}
+
+.no-data {
+  text-align: center;
+  color: #95a5a6;
+  font-size: 12px;
+  padding: 20px 10px;
+}
+
+/* Quick Access */
+.quick-access {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.access-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.access-btn:hover:not(:disabled) {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.access-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Map Panel */
+.map-panel {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-page.dark .map-panel {
+  background: #2c3e50;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  background: #e8f4f8;
+}
+
+/* Flight Detail Overlay */
+.flight-detail-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.detail-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  position: relative;
+}
+
+.home-page.dark .detail-card {
+  background: #2c3e50;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+.detail-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #27ae60;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.home-page.dark .detail-row {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  font-weight: bold;
+  color: #7f8c8d;
+}
+
+.detail-row span:last-child {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Footer */
+.home-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 30px 20px 15px;
+  margin-top: auto;
+  border-top: 2px solid #27ae60;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  margin: 0 0 12px 0;
+  color: #27ae60;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-section p {
+  margin: 6px 0;
+  font-size: 12px;
+  color: #bdc3c7;
+  line-height: 1.4;
+}
+
+.footer-section strong {
+  color: #ecf0f1;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  font-size: 12px;
+  color: #bdc3c7;
+  margin: 6px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.footer-section li:before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+}
+
+.status-online {
+  background: #27ae60;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+  font-size: 11px;
+  color: #95a5a6;
+}
+
+/* Leaflet Overrides */
+.leaflet-container {
+  background: #e8f4f8;
+  font-family: 'Arial', sans-serif;
+}
+
+.leaflet-popup-content {
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info-panel {
+    max-height: 300px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

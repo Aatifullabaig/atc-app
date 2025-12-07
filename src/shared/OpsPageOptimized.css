@@ -1,0 +1,332 @@
+.ops-page-optimized {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.ops-header {
+  background: #0d0d0d;
+  border-bottom: 3px solid #00ff00;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ops-header h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #00ff00;
+}
+
+.header-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.utc-time {
+  background: rgba(255, 255, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #ffff00;
+}
+
+.runway-display {
+  background: rgba(0, 255, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #00ff00;
+}
+
+.ops-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .ops-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-section {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aircraft-list,
+.flight-logs {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aircraft-list h2,
+.flight-logs h2 {
+  margin: 0;
+  padding: 10px 12px;
+  background: #2d2d2d;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+  color: #ffff00;
+  letter-spacing: 1px;
+}
+
+.list-container,
+.logs-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-container::-webkit-scrollbar,
+.logs-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list-container::-webkit-scrollbar-track,
+.logs-content::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.list-container::-webkit-scrollbar-thumb,
+.logs-content::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.flight-card-ops {
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.flight-card-ops:hover {
+  background: #2d2d2d;
+  border-color: #ff6b35;
+}
+
+.active-flight {
+  border-left: 4px solid #00ff00;
+}
+
+.old-aircraft {
+  border-left: 4px solid #666;
+  opacity: 0.7;
+}
+
+.card-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-summary strong {
+  background: rgba(255, 255, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #ffff00;
+}
+
+.position-badge {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.completed-time {
+  color: #aaa;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #ccc;
+}
+
+.phase-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.sector-badge {
+  display: inline-block;
+  background: rgba(255, 165, 0, 0.3);
+  color: #ffa500;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.empty-message {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.selected-flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 0, 0.1);
+  border-bottom: 2px solid #ffff00;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.selected-flight-header strong {
+  color: #ffff00;
+}
+
+.flight-logs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.log-entry {
+  display: flex;
+  gap: 10px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #0088ff;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.log-time {
+  color: #ffff00;
+  font-weight: bold;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.log-message {
+  color: #ccc;
+  flex-grow: 1;
+}
+
+.empty-logs {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Leaflet map customization */
+#ops-map .leaflet-container {
+  background: #1a1a1a;
+}
+
+#ops-map .leaflet-tile {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ops-header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .ops-header h1 {
+    font-size: 16px;
+  }
+
+  .header-info {
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .ops-layout {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .card-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-details {
+    font-size: 10px;
+  }
+
+  .log-entry {
+    flex-direction: column;
+    font-size: 10px;
+  }
+}

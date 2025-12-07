@@ -1,0 +1,486 @@
+.tower-page-optimized {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.tower-header {
+  background: #0d0d0d;
+  border-bottom: 3px solid #ff6b35;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tower-header h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.utc-time {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffff00;
+  background: rgba(255, 255, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.runway-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-runway {
+  padding: 6px 12px;
+  background: #333;
+  border: 2px solid #666;
+  color: #aaa;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-runway.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: #fff;
+}
+
+.tower-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .tower-content {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.ops-column {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ops-column h2 {
+  margin: 0;
+  padding: 12px;
+  background: #2d2d2d;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+  color: #ffff00;
+}
+
+.flights-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flights-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.flights-container::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.flights-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.empty-state {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.flight-card {
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 4px;
+  transition: all 0.2s;
+}
+
+.flight-card:hover {
+  background: #2d2d2d;
+  border-color: #ff6b35;
+  box-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+.ground-ops-card {
+  border-left: 4px solid #4ecdc4;
+}
+
+.air-ops-card {
+  border-left: 4px solid #ff6b35;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.aircraft-reg {
+  background: rgba(255, 255, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #ffff00;
+}
+
+.pilot-pic,
+.counts {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flight-status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.phase-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  width: fit-content;
+}
+
+.ground-pos {
+  background: #4ecdc4;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.position-display {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  border-left: 3px solid #ff6b35;
+}
+
+.position-line {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.sector-info {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.quick-buttons {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.btn-xs {
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.btn-sm {
+  padding: 6px 10px;
+  font-size: 11px;
+}
+
+.btn-md {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.btn-lg {
+  padding: 12px 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: #0088ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0066cc;
+  transform: scale(1.05);
+}
+
+.btn-success {
+  background: #00cc66;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background: #00aa55;
+  transform: scale(1.05);
+}
+
+.btn-info {
+  background: #00ccff;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-info:hover {
+  background: #00aacc;
+  transform: scale(1.05);
+}
+
+.btn-warning {
+  background: #ffaa00;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-warning:hover {
+  background: #ff9900;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background: #ff3333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ff6b35;
+  color: #ff6b35;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 107, 53, 0.2);
+}
+
+.btn-secondary {
+  background: #666;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #555;
+}
+
+.taxi-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 6px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.post-landing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-circuit {
+  background: #ff9900;
+  color: #000;
+  flex: 1;
+}
+
+/* MODAL STYLES */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #ffff00;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 10px;
+}
+
+.phase-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.btn-phase {
+  background: #333;
+  color: #aaa;
+  border: 1px solid #555;
+  padding: 8px;
+}
+
+.btn-phase.active {
+  background: #ff6b35;
+  color: #000;
+  border-color: #ff6b35;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: #ffff00;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 6px rgba(255, 107, 53, 0.5);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tower-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tower-content {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tower-header h1 {
+    font-size: 16px;
+  }
+
+  .btn-xs {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+
+  .phase-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .taxi-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

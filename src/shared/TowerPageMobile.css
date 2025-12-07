@@ -1,0 +1,335 @@
+.tower-mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, monospace;
+  overflow: hidden;
+}
+
+.mobile-header {
+  background: #1a1a1a;
+  border-bottom: 3px solid #ff6b35;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-top h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.utc-badge {
+  background: #ff6b35;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.runway-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.runway-tabs button {
+  flex: 1;
+  padding: 8px;
+  background: #333;
+  border: 2px solid #555;
+  color: #aaa;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.runway-tabs button.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: #000;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  background: #333;
+  border: none;
+  color: #aaa;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.tab-btn.active {
+  background: #0088ff;
+  color: #fff;
+}
+
+.flights-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.flights-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.flights-container::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 2px;
+}
+
+.empty {
+  padding: 30px 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.flight-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.flight-card.expanded {
+  border-color: #ff6b35;
+  background: #222;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.flight-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.registration {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffff00;
+}
+
+.pic {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.status {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.phase-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.phase-badge.airborne,
+.phase-badge.air {
+  background: #ff6b35;
+  color: #000;
+}
+
+.phase-badge.on_ground {
+  background: #4ecdc4;
+  color: #000;
+}
+
+.phase-badge.taxi {
+  background: #00ccff;
+  color: #000;
+}
+
+.phase-badge.landing {
+  background: #ffaa00;
+  color: #000;
+}
+
+.phase-badge.shutdown {
+  background: #666;
+  color: #fff;
+}
+
+.expand-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b35;
+  width: 30px;
+  text-align: center;
+}
+
+.card-actions {
+  padding: 10px;
+  border-top: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-line {
+  padding: 8px;
+  background: #2a2a2a;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.taxi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.action-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 44px;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.action-btn.wide {
+  grid-column: 1 / -1;
+}
+
+.action-btn.primary {
+  background: #0088ff;
+  color: #fff;
+}
+
+.action-btn.secondary {
+  background: #666;
+  color: #fff;
+}
+
+.action-btn.success {
+  background: #00cc66;
+  color: #000;
+}
+
+.action-btn.info {
+  background: #00ccff;
+  color: #000;
+}
+
+.action-btn.warning {
+  background: #ffaa00;
+  color: #000;
+}
+
+.action-btn.danger {
+  background: #ff3333;
+  color: #fff;
+}
+
+.action-btn.pattern-btn {
+  background: #4ecdc4;
+  color: #000;
+  font-size: 12px;
+  padding: 10px 6px;
+  min-height: 40px;
+}
+
+.action-btn.taxi-btn {
+  background: #333;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  min-height: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .header-top h1 {
+    font-size: 20px;
+  }
+
+  .action-btn {
+    min-height: 48px;
+    font-size: 12px;
+  }
+
+  .taxi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .registration {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    min-height: 44px;
+    padding: 10px;
+    font-size: 11px;
+  }
+}
