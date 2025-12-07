@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import supabase from '../lib/supabaseClient';
-import { recordPatternLeg, recordPositionReport, recordGoAround, recordLanding, startFlight, taxiToPoint, recordTakeoff, recordShutdown } from '../lib/flightActions.js';
+import { recordPatternLeg, recordGoAround, recordLanding, startFlight, taxiToPoint, recordTakeoff, recordShutdown } from '../lib/flightActions.js';
 import { PATTERN_22_RIGHT, PATTERN_04_RIGHT } from '../lib/patterns';
 import '../shared/TowerPageMobile.css';
 
@@ -11,7 +11,6 @@ const TowerPageMobile = () => {
   const [utcTime, setUtcTime] = useState(new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'UTC' }));
   const [activeTab, setActiveTab] = useState('ground');
   const [expandedFlight, setExpandedFlight] = useState(null);
-  const [actionMode, setActionMode] = useState(null); // 'pattern', 'taxi', 'position', etc.
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -87,7 +86,6 @@ const TowerPageMobile = () => {
       // Small delay to ensure database is updated
       await new Promise(resolve => setTimeout(resolve, 300));
       await loadFlights();
-      setActionMode(null);
       setExpandedFlight(null);
     } catch (error) {
       alert(`Error: ${error.message}`);
@@ -167,8 +165,6 @@ const TowerPageMobile = () => {
 };
 
 const FlightCard = ({ flight, isExpanded, onToggle, isAfterLanding, isTaxiReady, isAirOps, isCircuitTraining, patterns, onAction, runway }) => {
-  const isOnGround = !isAirOps;
-
   return (
     <div className={`flight-card ${isExpanded ? 'expanded' : ''}`}>
       <div className="card-header" onClick={onToggle}>

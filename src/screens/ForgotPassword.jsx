@@ -7,14 +7,12 @@ import '../shared/AuthPages.css';
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
   const { user } = useAuth();
   const { isDark, toggleTheme } = useContext(ThemeContext);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [step, setStep] = useState('email'); // 'email' or 'reset'
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 

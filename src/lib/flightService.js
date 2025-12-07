@@ -45,7 +45,7 @@ export const getSectorName = (radial) => {
 export const getPhaseDisplay = (phase, runway) => {
   const pattern = RUNWAY_PATTERNS[runway];
   if (!pattern) return phase;
-  for (const [key, value] of Object.entries(pattern)) {
+  for (const [, value] of Object.entries(pattern)) {
     if (value.name === phase) return value.name;
   }
   return phase;
