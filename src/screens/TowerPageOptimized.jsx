@@ -36,9 +36,7 @@ const TowerPageOptimized = () => {
   });
 
   // Taxi decision (post-landing)
-  const [taxiDecision, setTaxiDecision] = useState(null);
   const [postLandingDecision, setPostLandingDecision] = useState(null);
-  const [selectedTaxiPoint, setSelectedTaxiPoint] = useState(null);
 
   const taxiPoints = ['apron', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
 
@@ -60,6 +58,7 @@ const TowerPageOptimized = () => {
     loadFlights();
     const unsubscribe = setupRealtimeSubscriptions();
     return unsubscribe;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const setupRealtimeSubscriptions = () => {

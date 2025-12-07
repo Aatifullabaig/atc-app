@@ -30,6 +30,7 @@ const GroundPage = () => {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('create');
   const [aircraft, setAircraft] = useState([]);
+  const [cadets, setCadets] = useState([]);
   const [instructors, setInstructors] = useState([]);
   const [draftFlights, setDraftFlights] = useState([]);
   const [readyFlights, setReadyFlights] = useState([]);
