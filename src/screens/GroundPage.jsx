@@ -30,7 +30,6 @@ const GroundPage = () => {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('create');
   const [aircraft, setAircraft] = useState([]);
-  const [cadets, setCadets] = useState([]);
   const [instructors, setInstructors] = useState([]);
   const [draftFlights, setDraftFlights] = useState([]);
   const [readyFlights, setReadyFlights] = useState([]);
@@ -72,14 +71,13 @@ const GroundPage = () => {
   const loadInitialData = async () => {
     try {
       setLoading(true);
-      const [aircraftData, cadetsData, instructorsData] = await Promise.all([
+      const [aircraftData, , instructorsData] = await Promise.all([
         getAircraft(),
         getPilotsByRole('cadet'),
         getPilotsByRole('instructor'),
       ]);
 
       setAircraft(aircraftData || []);
-      setCadets(cadetsData || []);
       setInstructors(instructorsData || []);
 
       await loadFlights();
