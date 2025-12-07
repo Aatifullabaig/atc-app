@@ -11,10 +11,13 @@
 
 /* HEADER */
 .home-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: var(--bg-darker);
   border-bottom: 3px solid var(--accent);
   padding: var(--spacing-md);
-  flex-shrink: 0;
   z-index: 100;
 }
 
@@ -104,6 +107,8 @@
   -webkit-overflow-scrolling: touch;
   padding: var(--spacing-md);
   width: 100%;
+  margin-top: 120px;
+  margin-bottom: 80px;
 }
 
 .content-wrapper {
@@ -325,11 +330,14 @@
 
 /* FOOTER */
 .home-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: var(--bg-darker);
   border-top: 3px solid var(--accent);
   padding: var(--spacing-lg);
-  flex-shrink: 0;
-  margin-top: auto;
+  z-index: 100;
 }
 
 .footer-content {

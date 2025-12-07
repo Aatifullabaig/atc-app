@@ -9,10 +9,14 @@
 }
 
 .mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #1a1a1a;
   border-bottom: 3px solid #ff6b35;
   padding: 12px;
-  flex-shrink: 0;
+  z-index: 100;
 }
 
 .header-top {
@@ -61,12 +65,16 @@
 }
 
 .tab-nav {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  right: 0;
   display: flex;
   gap: 4px;
   padding: 8px;
   background: #1a1a1a;
   border-bottom: 1px solid #333;
-  flex-shrink: 0;
+  z-index: 90;
 }
 
 .tab-btn {
@@ -95,6 +103,7 @@
   flex-direction: column;
   gap: 6px;
   -webkit-overflow-scrolling: touch;
+  margin-top: 160px;
 }
 
 .flights-container::-webkit-scrollbar {

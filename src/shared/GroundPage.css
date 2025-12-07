@@ -9,10 +9,15 @@
 }
 
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #2c3e50;
   color: white;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .header-content {
@@ -44,10 +49,15 @@
 
 /* Tabs */
 .tabs {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
   display: flex;
   background-color: white;
   border-bottom: 2px solid #ecf0f1;
   overflow-x: auto;
+  z-index: 90;
 }
 
 .tab {
@@ -79,6 +89,8 @@
   -webkit-overflow-scrolling: touch;
   padding: 1rem;
   width: 100%;
+  margin-top: 120px;
+  margin-bottom: 0;
 }
 
 .section {
