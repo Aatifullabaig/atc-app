@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [step, setStep] = useState('email'); // 'email' or 'reset'
+  const [step] = useState('email'); // 'email' or 'reset'
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
