@@ -36,6 +36,7 @@ const TowerPageOptimized = () => {
   });
 
   // Taxi decision (post-landing)
+  const [taxiDecision, setTaxiDecision] = useState(null);
   const [postLandingDecision, setPostLandingDecision] = useState(null);
 
   const taxiPoints = ['apron', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
