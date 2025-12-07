@@ -215,11 +215,11 @@ const FlightCard = ({ flight, isExpanded, onToggle, isAfterLanding, isTaxiReady,
               {isAfterLanding ? (
                 <>
                   <div className="info-line">Landing #{flight.landing_count} | GA: {flight.go_around_count || 0}</div>
-                  <button className="action-btn wide success" onClick={() => onAction(flight.id, 'start')}>
-                    🔄 ANOTHER CIRCUIT
+                  <button className="action-btn wide success" onClick={() => onAction(flight.id, 'takeoff')}>
+                    🔄 BACK TO CIRCUIT
                   </button>
-                  <button className="action-btn wide secondary" onClick={() => onAction(flight.id, 'start')}>
-                    🚕 TO APRON
+                  <button className="action-btn wide secondary" onClick={() => onAction(flight.id, 'shutdown')}>
+                    🛑 SHUTDOWN
                   </button>
                 </>
               ) : isTaxiReady ? (
