@@ -36,7 +36,6 @@ const TowerPageOptimized = () => {
   });
 
   // Taxi decision (post-landing)
-  const [taxiDecision, setTaxiDecision] = useState(null);
   const [postLandingDecision, setPostLandingDecision] = useState(null);
 
   const taxiPoints = ['apron', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
@@ -170,7 +169,6 @@ const TowerPageOptimized = () => {
       await taxiAfterLanding(flightId, location);
       alert(`${location} taxi action completed successfully`);
       await loadFlights();
-      setTaxiDecision(null);
     } catch (error) {
       console.error('Error taxiing after landing:', error);
       alert(`Error taxiing after landing: ${error.message}`);
